@@ -1,5 +1,5 @@
-cordova-plugin-share
-====================
+cordova-plugin-sharefile
+========================
 
 Cordova Plugin to open native "share" popup in Android for Sharing Files
 
