@@ -1,7 +1,9 @@
 cordova-plugin-share
 ====================
 
-Cordova Plugin to open native "share" popup in Android and iOS
+Cordova Plugin to open native "share" popup in Android for Sharing Files
+
+This is completely derived from mark marijissen's simple cordova share plugin
 
 ### Install
 
