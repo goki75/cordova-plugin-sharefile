@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import android.content.Intent;
 import android.net.Uri;
+import java.io.File;
 
     /**
      * http://developer.android.com/training/sharing/send.html
@@ -18,20 +19,21 @@ import android.net.Uri;
         @Override
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
             if (action.equals("sharefile")) {
-                String FileURI = args.getString(0);
+                String FilePathURI = args.getString(0);
                 String title = args.getString(1);
                 String mimetype = args.getString(2);
-                this.sharefile(FileURI, title, mimetype, callbackContext);
+                this.sharefile(FilePathURI, title, mimetype, callbackContext);
                 return true;
             }
             return false;
         }
 
-        private void sharefile(String uriToFile, String title, String mimetype, CallbackContext callbackContext) {
+        private void sharefile(String FilePath, String title, String mimetype, CallbackContext callbackContext) {
           try {
             Intent shareIntent = new Intent();
             shareIntent.setAction(Intent.ACTION_SEND);
-            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(uriToFile));
+            File file = new File(FilePath);
+            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
             shareIntent.setType(mimetype);
             cordova.getActivity().startActivity(Intent.createChooser(shareIntent, title));
             callbackContext.success();
