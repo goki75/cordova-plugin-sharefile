@@ -13,9 +13,9 @@ In your phonegap/cordova project, type:
 
 ### Usage
 
-`navigator.share(URItoFile,title,mimetype)`
+`navigator.share(URIString,title,mimetype)`
 
-* URItoFile: URI of the File/Image to be shared
+* URIStrinf: URI Strinf of the File/Image to be shared
 * title: Title of popup, i.e. "Share this quote" (android only, default: "Share")
 * mimetype: Mimetype, i.e. "image/jpeg" (android only, default: "plain/text")
 
