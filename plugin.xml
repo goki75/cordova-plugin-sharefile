@@ -18,6 +18,10 @@ xmlns:android="http://schemas.android.com/apk/res/android" id="com.gk.sharefile"
                 <param name="android-package" value="com.gk.sharefile.ShareFile"/>
             </feature>
         </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
         <source-file src="src/android/ShareFile.java" target-dir="src/com/gk/sharefile" />
      </platform>
 </plugin>
