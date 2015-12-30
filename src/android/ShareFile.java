@@ -20,7 +20,7 @@ import android.content.Intent;
                 String FileURI = args.getString(0);
                 String title = args.getString(1);
                 String mimetype = args.getString(2);
-                this.share(FileURI, title, mimetype, callbackContext);
+                this.sharefile(FileURI, title, mimetype, callbackContext);
                 return true;
             }
             return false;
