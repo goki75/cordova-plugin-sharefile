@@ -30,7 +30,7 @@ import android.content.Intent;
           try {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_STREAM, uriToFile);
+            sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(uriToFile));
             sendIntent.setType(mimetype);
             cordova.getActivity().startActivity(Intent.createChooser(sendIntent, title));
             callbackContext.success();
