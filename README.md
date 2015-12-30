@@ -9,7 +9,7 @@ This is completely derived from Mark Marijissen's simple cordova share plugin
 
 In your phonegap/cordova project, type:
 
-`cordova plugins add https://github.com/goki75/cordova-plugin-share.git`
+`cordova plugins add https://github.com/goki75/cordova-plugin-sharefile.git`
 
 ### Usage
 
