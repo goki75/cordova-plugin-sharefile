@@ -32,9 +32,10 @@ import java.io.File;
           try {
             Intent shareIntent = new Intent();
             shareIntent.setAction(Intent.ACTION_SEND);
-            File file = new File(FilePath);
-            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+            /**File file = new File(FilePath);*/
+            /** shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); */
+            /**shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));*/
+            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(FilePath));
             shareIntent.setType(mimetype);
             cordova.getActivity().startActivity(Intent.createChooser(shareIntent, title));
             callbackContext.success();
