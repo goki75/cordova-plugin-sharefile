@@ -3,7 +3,7 @@ module.exports = function(fileURI,title,mimetype,success,error){
     fileURI = "";
   }
   if(typeof title !== "string") {
-    title = "Share";
+    title = "ShareFile";
   }
   if(typeof mimetype !== "string") {
     mimetype = "text/plain";
