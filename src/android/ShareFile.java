@@ -29,11 +29,11 @@ import android.net.Uri;
 
         private void sharefile(String uriToFile, String title, String mimetype, CallbackContext callbackContext) {
           try {
-            Intent sendIntent = new Intent();
-            sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(uriToFile));
-            sendIntent.setType(mimetype);
-            cordova.getActivity().startActivity(Intent.createChooser(sendIntent, title));
+            Intent shareIntent = new Intent();
+            shareIntent.setAction(Intent.ACTION_SEND);
+            shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(uriToFile));
+            shareIntent.setType(mimetype);
+            cordova.getActivity().startActivity(Intent.createChooser(shareIntent, title));
             callbackContext.success();
             } catch(Error e) {
                 callbackContext.error(e.getMessage());
