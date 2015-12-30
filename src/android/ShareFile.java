@@ -17,7 +17,7 @@ import android.net.Uri;
 
         @Override
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-            if (action.equals("share")) {
+            if (action.equals("sharefile")) {
                 String FileURI = args.getString(0);
                 String title = args.getString(1);
                 String mimetype = args.getString(2);
