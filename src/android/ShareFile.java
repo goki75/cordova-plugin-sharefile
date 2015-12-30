@@ -26,7 +26,7 @@ import android.content.Intent;
             return false;
         }
 
-        private void share(String text, String title, String mimetype, CallbackContext callbackContext) {
+        private void sharefile(String uriToFile, String title, String mimetype, CallbackContext callbackContext) {
           try {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
